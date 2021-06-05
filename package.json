@@ -1,0 +1,31 @@
+{
+  "name": "eleventy-js-test",
+  "version": "0.2.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ELEVENTY_ENV=production node -r esm node_modules/.bin/eleventy",
+    "dev": "ELEVENTY_ENV=development node -r esm node_modules/.bin/eleventy --serve",
+    "debug": "DEBUG=* node -r esm node_modules/.bin/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/",
+    "https": "https://github.com/",
+    "editUrl": "https://github.com/"
+  },
+  "author": "Brian Hinton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/"
+  },
+  "homepage": "https://github.com",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "clean-css": "^4.2.3",
+    "esm": "^3.2.25",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.5.1"
+  },
+  "keywords": []
+}
