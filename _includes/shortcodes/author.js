@@ -9,8 +9,7 @@
  * @module _includes/shortcodes/author
  * @param {Object} eleventyConfig 11ty’s Config API
  */
-export default eleventyConfig =>
-
+export default (eleventyConfig) =>
   /**
    * Content author markup
    * @method
@@ -20,6 +19,7 @@ export default eleventyConfig =>
    * @example `${this.author(data)}`
    * @see {@link https://www.11ty.dev/docs/data/ Using data in 11ty}
    */
-  eleventyConfig.addShortcode('author', data =>
-    `<span id="author_name">${data.author.name.fullName}</span>`
-  )
+  eleventyConfig.addShortcode(
+    "author",
+    (data) => `<span>${data.author.name.fullName}</span>`
+  );

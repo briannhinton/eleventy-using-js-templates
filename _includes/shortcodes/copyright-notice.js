@@ -9,8 +9,7 @@
  * @module _includes/shortcodes/copyright-notice
  * @param {Object} eleventyConfig 11ty’s Config API
  */
-export default eleventyConfig =>
-
+export default (eleventyConfig) =>
   /**
    * Copyright notice markup
    * @method
@@ -20,10 +19,12 @@ export default eleventyConfig =>
    * @example `${this.copyrightNotice(data)}`
    * @see {@link https://www.11ty.dev/docs/data/ Using data in 11ty}
    */
-  eleventyConfig.addShortcode('copyrightNotice', data =>
-    `<span id="copyright_year">&copy; ${data.copyright.year}</span>
-      <span id="copyright_holder">${data.copyright.holder}.</span>
-      <span id="copyright_license">
+  eleventyConfig.addShortcode(
+    "copyrightNotice",
+    (data) =>
+      `<span>&copy; ${data.copyright.year}</span>
+      <span>${data.copyright.holder}.</span>
+      <span>
         <a href="${data.copyright.url}"><abbr title="${data.copyright.license.abbr}: ${data.copyright.license.name}">${data.copyright.license.abbr}</abbr></a>.
       </span>`
-  )
+  );
