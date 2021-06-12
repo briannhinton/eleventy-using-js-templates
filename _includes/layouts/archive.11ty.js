@@ -9,8 +9,8 @@
  * @see {@link https://www.11ty.dev/docs/languages/javascript/#optional-data-method Optional `data` in JavaScript templates in 11ty}
  */
 export var data = {
-  layout: 'layouts/base'
-}
+  layout: "layouts/base"
+};
 
 /**
  * The content of the template
@@ -21,7 +21,7 @@ export var data = {
  * @see {@link https://www.11ty.dev/docs/pagination/ Pagination in 11ty}
  */
 export function render(data) {
-  return `<article>
+  return `<article class="prose lg:prose-xl">
     <header class="article-header">
       <h2>${data.title}</h2>
     </header>
@@ -30,5 +30,5 @@ export function render(data) {
     <footer>
       ${this.paginationNav(data)}
     </footer>
-  </article>`
+  </article>`;
 }

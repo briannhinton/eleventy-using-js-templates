@@ -6,11 +6,7 @@ module.exports = {
     }
   },
   theme: {
-    extend: {
-      colors: {
-        change: "transparent"
-      }
-    }
+    extend: {}
   },
   variants: {},
   plugins: []

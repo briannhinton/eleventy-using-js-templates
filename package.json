@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "ELEVENTY_ENV=production node -r esm node_modules/.bin/eleventy postcss styles/tailwind.css --o _site/style.css",
-    "dev": "ELEVENTY_ENV=development node -r esm node_modules/.bin/eleventy --serve & postcss styles/tailwind.css --o _tmp/style.css --watch",
+    "build": "ELEVENTY_ENV=production node -r esm node_modules/.bin/eleventy postcss css/tailwind.css --o _site/style.css",
+    "dev": "ELEVENTY_ENV=development node -r esm node_modules/.bin/eleventy --serve & postcss css/tailwind.css --o _tmp/style.css --watch",
     "debug": "DEBUG=* node -r esm node_modules/.bin/eleventy"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "homepage": "https://github.com",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "@tailwindcss/typography": "0.4.1",
     "clean-css": "^4.2.3",
     "esm": "^3.2.25",
     "html-minifier": "^4.0.0",
