@@ -9,8 +9,7 @@
  * @module _includes/shortcodes/external-css
  * @param {Object} eleventyConfig 11ty’s Config API
  */
-export default eleventyConfig =>
-
+export default (eleventyConfig) =>
   /**
    * Create one or more `link` references
    * @method
@@ -20,25 +19,12 @@ export default eleventyConfig =>
    * @example `${this.externalCSS(data)}`
    * @see {@link https://www.11ty.dev/docs/data/ Using data in 11ty}
    */
-  eleventyConfig.addShortcode('externalCSS', data => {
-    var stylesheets = [
-      'pages',
-      'posts'
-    ]
-    var files = []
-    var html = '';
-    if (data.externalCSS !== undefined || data.tags !== undefined) {
-      if (Array.isArray(data.externalCSS)) {
-        files = [...data.externalCSS]
-      }
-      if (typeof data.externalCSS === 'string') {
-        files.push(data.externalCSS)
-      }
-      if (stylesheets.includes(data.tags[0])) {
-        files.push(data.tags[0]) 
-      }
-      files.map(file =>
-        html += `<link href="/css/${file}.css" rel="stylesheet" media="screen">`)
-    }
-    return html
-  })
+  eleventyConfig.addShortcode("externalCSS", (data) => {
+    var files = [];
+    var html = "";
+    files.map(
+      (file) =>
+        (html += `<link href="/css/${file}.css" rel="stylesheet" media="screen">`)
+    );
+    return html;
+  });

@@ -20,8 +20,7 @@ export default function (eleventyConfig) {
    * @see {@link https://www.11ty.dev/docs/data/ Using data in 11ty}
    */
   eleventyConfig.addShortcode("gettingStarted", function (data) {
-    return `<section 
-      style="border:var(--border);padding:var(--base-unit);">
+    return `<section>
       <h2>Get started!</h2>
       <ul>
         <li>Edit <code>./_data/site.json</code> with your site’s information</li>
@@ -30,7 +29,7 @@ export default function (eleventyConfig) {
           data.layout
         }.11ty.js</code></li>
       </ul>
-      <p style="display:flex;gap:var(--base-unit);">You could also <a href="https://app.netlify.com/start/deploy?repository=https://gitlab.com/reubenlillie/eleventy-dot-js-blog">${this.fileToString(
+      <p>You could also <a href="https://app.netlify.com/start/deploy?repository=https://gitlab.com/reubenlillie/eleventy-dot-js-blog">${this.fileToString(
         "img/deploy-to-netlify-button.svg"
       )}</a></p>
       <p>More information on <a href="${data.pkg.homepage}">GitLab</a></p>

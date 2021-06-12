@@ -9,8 +9,7 @@
  * @module _includes/shortcodes/head-tag
  * @param {Object} eleventyConfig 11ty’s Config API
  */
-export default eleventyConfig =>
-
+export default (eleventyConfig) =>
   /**
    * HTML `<head>` markup
    * @method
@@ -20,7 +19,7 @@ export default eleventyConfig =>
    * @example `${this.headTag(data)}`
    * @see {@link https://www.11ty.dev/docs/data/ Using data in 11ty}
    */
-  eleventyConfig.addShortcode('headTag', function (data) {
+  eleventyConfig.addShortcode("headTag", function (data) {
     return `<head>
       ${this.titleTag(data)}
       <meta charset="utf-8">
@@ -29,9 +28,6 @@ export default eleventyConfig =>
       ${this.description(data)}
       ${this.favicon(data)}
       ${this.socialMeta(data)}
-      <style>
-        ${this.minifyCSS(this.inlineCSS(data))}
-      </style>
       ${this.externalCSS(data)}
-    </head>`
-  })
+    </head>`;
+  });

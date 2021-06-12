@@ -9,8 +9,8 @@
  * @see {@link https://www.11ty.dev/docs/languages/javascript/#optional-data-method Optional `data` in JavaScript templates in 11ty}
  */
 export var data = {
-  layout: 'layouts/base'
-}
+  layout: "layouts/base"
+};
 
 /**
  * The content of the page template
@@ -22,9 +22,9 @@ export var data = {
  */
 export function render(data) {
   return `<article>
-    <header class="article-header">
+    <header>
       <h2>${data.title}</h2>
     </header>
     ${data.content}
-  </article>`
+  </article>`;
 }
